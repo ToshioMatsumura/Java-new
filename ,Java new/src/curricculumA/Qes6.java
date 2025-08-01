@@ -25,6 +25,10 @@ public class Qes6 {
 		System.out.println("体重は" + weight + "kgです");
 
 		System.out.println("好きな食べ物は" + food +"です");
+		
+		System.out.println("BMIは" + (weight / ((height / 100) * (height / 100)))  + "です");
+		
+		
 	}
 
 }
