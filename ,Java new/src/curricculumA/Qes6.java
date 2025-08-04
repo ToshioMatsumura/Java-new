@@ -65,18 +65,23 @@ public class Qes6 {
 		System.out.println();//改行用
 		System.out.println(strAge + strHeight + strWeight);*/
 		//		↑↑↑↑ここはQ11↑↑↑↑  
+
 		String input1 = "30";
-		
-		int number1 = Integer.parseInt(input1);
-		
+
+		int number1 = Integer.parseInt(input1.trim());
+
 		System.out.println(number1);
 
 		String input2 = "168.5";
 
-		int number2 = Integer.parseInt(input2);
+		double number2 = Double.parseDouble(input2);
 
 		System.out.println(number2);
 		//		ここはQ12
+
+		System.out.println();//改行用
+		System.out.println();
+		//		ここはQ13
 
 		name = "鈴木一郎";
 
