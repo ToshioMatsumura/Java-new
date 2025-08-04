@@ -38,7 +38,7 @@ public class Qes6 {
 
 		food = "オムライス";
 
-		System.out.println();
+		System.out.println();//改行用
 		System.out.println("初めまして" + name + "です");
 
 		System.out.println("年齢は" + age + "歳です");
@@ -52,6 +52,27 @@ public class Qes6 {
 		System.out.println("BMIは" + (weight / ((height / 100) * (height / 100))) + "です");
 		//		↑↑↑↑ここまでQ8↑↑↑↑
 
+		System.out.println(); //改行用
+		System.out.println(age >= 25);
+		//		↑↑↑↑ここはQ10↑↑↑↑
+
+		String strAge = String.valueOf(age);
+
+		String strHeight = String.valueOf(height);
+
+		String strWeight = String.valueOf(weight);
+
+		System.out.println();//改行用
+		System.out.println(strAge + strHeight + strWeight);
+		//		↑↑↑↑ここはQ11↑↑↑↑  
+		
+		int age2 = Integer.parseInt(strAge);
+
+		int height2 = Integer.parseInt(strHeight);
+
+		System.out.println(age2 + height2);
+		//		ここはQ12
+
 		name = "鈴木一郎";
 
 		age = age + 24;
@@ -64,7 +85,7 @@ public class Qes6 {
 
 		double bmi2 = weight / ((height / 100) * (height / 100));
 
-		System.out.println();
+		System.out.println();//改行用
 		System.out.println("初めまして" + name + "です");
 
 		System.out.println("年齢は" + age + "歳です");
@@ -79,10 +100,8 @@ public class Qes6 {
 
 		double bmi3 = ((double) Math.round(bmi2 * 100)) / 100;
 		System.out.println("BMIは" + bmi3 + "です");
-//		↑↑↑↑ここまでQ9↑↑↑↑
+		//		↑↑↑↑ここまでQ9↑↑↑↑
 
-		System.out.println(age >= 25);
-//		↑↑↑↑ここまでQ10↑↑↑↑
 	}
 
 }
