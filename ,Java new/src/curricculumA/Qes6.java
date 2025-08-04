@@ -79,6 +79,10 @@ public class Qes6 {
 
 		double bmi3 = ((double) Math.round(bmi2 * 100)) / 100;
 		System.out.println("BMIは" + bmi3 + "です");
+//		↑↑↑↑ここまでQ9↑↑↑↑
+
+		System.out.println(age >= 25);
+//		↑↑↑↑ここまでQ10↑↑↑↑
 	}
 
 }
