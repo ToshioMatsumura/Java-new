@@ -30,7 +30,7 @@ public class Qes6 {
 
 		name = "鈴木一郎";
 
-		age = 24;
+		age = 30;
 
 		height = 168.5;
 
@@ -56,21 +56,26 @@ public class Qes6 {
 		System.out.println(age >= 25);
 		//		↑↑↑↑ここはQ10↑↑↑↑
 
-		String strAge = String.valueOf(age);
-
-		String strHeight = String.valueOf(height);
-
-		String strWeight = String.valueOf(weight);
-
-		System.out.println();//改行用
-		System.out.println(strAge + strHeight + strWeight);
-		//		↑↑↑↑ここはQ11↑↑↑↑  
+		/*String strAge = String.valueOf(age);
 		
-		int age2 = Integer.parseInt(strAge);
+		String strHeight = String.valueOf(height);
+		
+		String strWeight = String.valueOf(weight);
+		
+		System.out.println();//改行用
+		System.out.println(strAge + strHeight + strWeight);*/
+		//		↑↑↑↑ここはQ11↑↑↑↑  
+		String input1 = "30";
+		
+		int number1 = Integer.parseInt(input1);
+		
+		System.out.println(number1);
 
-		int height2 = Integer.parseInt(strHeight);
+		String input2 = "168.5";
 
-		System.out.println(age2 + height2);
+		int number2 = Integer.parseInt(input2);
+
+		System.out.println(number2);
 		//		ここはQ12
 
 		name = "鈴木一郎";

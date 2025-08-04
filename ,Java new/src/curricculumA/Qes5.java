@@ -14,6 +14,8 @@ public class Qes5 {
 		int num1 = 23;
 
 		System.out.println("ハローJAVA" + (num + num1));
+		
+		
 	}
 
 }
