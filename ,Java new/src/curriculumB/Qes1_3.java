@@ -10,7 +10,7 @@ public class Qes1_3 {
 		//		System.out.println("ユーザー名を入力してください。");
 
 		Scanner scanner = new Scanner(System.in);
-
+		Random random = new Random();
 		System.out.print("ユーザー名を入力してください: ");
 
 		String username = scanner.nextLine();
@@ -40,7 +40,7 @@ public class Qes1_3 {
 			System.out.println("手を選んでください (0: グー, 1: チョキ, 2: パー)");
 			int playerChoice = sccaner.nextInt();
 			
-			Random random = new Random();
+			
 			int opponentChoice = random.nextInt(3);
 			
 			
@@ -49,12 +49,11 @@ public class Qes1_3 {
             System.out.println("相手の手は「" + hands[opponentChoice] + "」");
             
             
-            if(playerChoice == opponentChoice) {
-            	System.out.println("DRAW あいこ もう一回しましょう！");{
+            if(playerChoice == opponentChoice) 
+            System.out.println("DRAW あいこ もう一回しましょう！");
             		
-            	}
-            		
-            	else if ((playerChoice == 0 && opponentChoice == 1) || (playerChoice == 1 && opponentChoice == 2) || (playerChoice == 2 && opponentChoice == 0)) {
+            	
+		else if ((playerChoice == 0 && opponentChoice == 1) || (playerChoice == 1 && opponentChoice == 2) || (playerChoice == 2 && opponentChoice == 0)) {
                     System.out.println("やるやん。");
                     System.out.println("次は俺にリベンジさせて");
                     win = true; // 勝ったのでゲーム終了
@@ -64,10 +63,12 @@ public class Qes1_3 {
                         System.out.println("俺の勝ち！");
                         System.out.println("負けは次につながるチャンスです！");
                         System.out.println("ネバーギブアップ！");
+                        
                     } else if (playerChoice == 1) {
                         System.out.println("俺の勝ち！");
                         System.out.println("たかがじゃんけん、そう思ってないですか？");
                         System.out.println("それやったら次も、俺が勝ちますよ");
+                        
                     } else if (playerChoice == 2) {
                         System.out.println("俺の勝ち！");
                         System.out.println("なんで負けたか、明日まで考えといてください。");
@@ -76,9 +77,7 @@ public class Qes1_3 {
                 }
             }
 
-            // 勝つまでにかかった回数を表示
-            System.out.println("勝つまでにかかった合計回数は" + rounds + "回です");
-        
-		}
-	}
-}
+	// 勝つまでにかかった回数を表示
+	System.out.println("勝つまでにかかった合計回数は"+rounds+"回です");
+
+}}
