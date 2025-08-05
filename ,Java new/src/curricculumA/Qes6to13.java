@@ -1,6 +1,6 @@
 package curricculumA;
 
-public class Qes6 {
+public class Qes6to13 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
@@ -80,7 +80,9 @@ public class Qes6 {
 		//		ここはQ12
 
 		System.out.println();//改行用
-		System.out.println();
+		boolean bool = (number1 >= 25 || number2 >= 160);
+		System.out.println(bool);
+
 		//		ここはQ13
 
 		name = "鈴木一郎";
