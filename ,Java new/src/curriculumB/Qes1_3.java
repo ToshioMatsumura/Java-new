@@ -30,3 +30,30 @@ public class Qes1_3 {
 }
 
 
+
+
+
+
+//再入力可の場合
+
+/*Scanner scanner = new Scanner(System.in);
+String username;
+
+while (true) {  // 無限ループ開始（正しい入力が来るまで繰り返す）
+    System.out.print("ユーザー名を入力してください: ");
+    username = scanner.nextLine();
+
+    if (username == null || username.length() == 0) {
+        System.out.println("名前を入力してください");
+    } else if (username.length() > 10) {
+        System.out.println("名前を10文字以内にしてください");
+    } else {
+        System.out.println("ユーザー名「" + username + "」を登録しました");
+        break;  // 正常入力なのでループを抜ける
+    }
+}
+
+scanner.close();
+}
+}*/
+
