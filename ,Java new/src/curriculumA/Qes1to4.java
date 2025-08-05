@@ -1,4 +1,4 @@
-package curricculumA;
+package curriculumA;
 
 public class Qes1to4 {
 
