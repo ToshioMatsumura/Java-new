@@ -38,46 +38,44 @@ public class Qes1_3 {
 			rounds++;
 
 			System.out.println("手を選んでください (0: グー, 1: チョキ, 2: パー)");
-			int playerChoice = sccaner.nextInt();
-			
-			
+			int playerChoice = scanner.nextInt();
+
 			int opponentChoice = random.nextInt(3);
-			
-			
-			String[] hands = {"グー", "チョキ", "パー"};
+
+			String[] hands = { "グー", "チョキ", "パー" };
 			System.out.println(username + "の手は「" + hands[playerChoice] + "」");
-            System.out.println("相手の手は「" + hands[opponentChoice] + "」");
-            
-            
-            if(playerChoice == opponentChoice) 
-            System.out.println("DRAW あいこ もう一回しましょう！");
-            		
-            	
-		else if ((playerChoice == 0 && opponentChoice == 1) || (playerChoice == 1 && opponentChoice == 2) || (playerChoice == 2 && opponentChoice == 0)) {
-                    System.out.println("やるやん。");
-                    System.out.println("次は俺にリベンジさせて");
-                    win = true; // 勝ったのでゲーム終了
-                } else {
-                    // 負けた場合のメッセージ
-                    if (playerChoice == 0) {
-                        System.out.println("俺の勝ち！");
-                        System.out.println("負けは次につながるチャンスです！");
-                        System.out.println("ネバーギブアップ！");
-                        
-                    } else if (playerChoice == 1) {
-                        System.out.println("俺の勝ち！");
-                        System.out.println("たかがじゃんけん、そう思ってないですか？");
-                        System.out.println("それやったら次も、俺が勝ちますよ");
-                        
-                    } else if (playerChoice == 2) {
-                        System.out.println("俺の勝ち！");
-                        System.out.println("なんで負けたか、明日まで考えといてください。");
-                        System.out.println("そしたら何かが見えてくるはずです");
-                    }
-                }
-            }
+			System.out.println("相手の手は「" + hands[opponentChoice] + "」");
 
-	// 勝つまでにかかった回数を表示
-	System.out.println("勝つまでにかかった合計回数は"+rounds+"回です");
+			if (playerChoice == opponentChoice)
+				System.out.println("DRAW あいこ もう一回しましょう！");
 
-}}
+			else if ((playerChoice == 0 && opponentChoice == 1) || (playerChoice == 1 && opponentChoice == 2)
+					|| (playerChoice == 2 && opponentChoice == 0)) {
+				System.out.println("やるやん。");
+				System.out.println("次は俺にリベンジさせて");
+				win = true; // 勝ったのでゲーム終了
+			} else {
+				// 負けた場合のメッセージ
+				if (playerChoice == 0) {
+					System.out.println("俺の勝ち！");
+					System.out.println("負けは次につながるチャンスです！");
+					System.out.println("ネバーギブアップ！");
+
+				} else if (playerChoice == 1) {
+					System.out.println("俺の勝ち！");
+					System.out.println("たかがじゃんけん、そう思ってないですか？");
+					System.out.println("それやったら次も、俺が勝ちますよ");
+
+				} else if (playerChoice == 2) {
+					System.out.println("俺の勝ち！");
+					System.out.println("なんで負けたか、明日まで考えといてください。");
+					System.out.println("そしたら何かが見えてくるはずです");
+				}
+			}
+		}
+
+		// 勝つまでにかかった回数を表示
+		System.out.println("勝つまでにかかった合計回数は" + rounds + "回です");
+
+	}
+}
