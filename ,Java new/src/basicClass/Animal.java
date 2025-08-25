@@ -5,9 +5,9 @@ public class Animal {
 	public static void main(String[] args) {
 		Animal outer = new Animal();
 		Dog dog1 = outer.new Dog();
-		System.out.println(name);
+		.out.println(name);
 		
-	}
+
 
 	// Q1：Dogクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
 	class Dog {
