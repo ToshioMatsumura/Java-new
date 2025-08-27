@@ -19,7 +19,6 @@ public class lion {
 
 	public void setName(String name) {
 		this.name = name;
-
 	}
 
 	public void setLength(double length) {
