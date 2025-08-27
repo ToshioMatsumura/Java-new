@@ -23,18 +23,8 @@
 
 package main;
 
-import java.util.Scanner;
+
 
 public class Main {
-	public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("名前を入力してください：");
-        String name = sc.nextLine();
-
-        sub player = new sub(name);
-        player.printStatus();
-
-        sc.close();
-    }
 }
