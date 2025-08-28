@@ -25,7 +25,7 @@ public class Qes1_3 {
 		} else if (!username.matches("^[a-zA-Z0-9]+$")) {
 			System.out.println("半角英数字のみで名前を入力してください");
 
-			return;
+//			return;
 
 		} else {
 			System.out.println("ユーザー名「" + username + "」を登録しました");
@@ -76,6 +76,7 @@ public class Qes1_3 {
 
 		// 勝つまでにかかった回数を表示
 		System.out.println("勝つまでにかかった合計回数は" + rounds + "回です");
+		scanner.close();
 
 	}
 }

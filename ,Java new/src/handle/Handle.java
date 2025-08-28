@@ -20,14 +20,14 @@ package handle;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class handle {
+public class Handle {
 
 	private String greeting;
 	private String sushi;
 	private String explain;
 	private String dateTime;
 
-	public handle(String greeting, String sushi, String explain) {
+	public Handle(String greeting, String sushi, String explain) {
 		this.greeting = greeting;
 		this.sushi = sushi;
 		this.explain = explain;

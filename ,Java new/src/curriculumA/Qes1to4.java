@@ -57,7 +57,7 @@ public class Qes1to4 {
 		//		String型
 		String str;
 
-		str = "あいうえお";
+		str = null;
 
 		str = "ハロー";
 

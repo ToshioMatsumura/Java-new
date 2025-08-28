@@ -18,13 +18,13 @@
 
 package conosle;
 
-import handle.handle;
+import handle.Handle;
 
-public class console {
+public class Console {
 
 	public static void main(String[] args) {
 		
-        handle handle = new handle(
+        Handle handle = new Handle(
                 "こんにちは！ここは日本です！",
                 "この寿司はうまい",
                 "寿司は和食です"

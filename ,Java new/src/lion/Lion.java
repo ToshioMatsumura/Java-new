@@ -9,9 +9,9 @@
  	
  */
 
-package Lion;
+package lion;
 
-public class lion {
+public class Lion {
 
 	private String name;
 	private double length;
@@ -43,7 +43,7 @@ public class lion {
 
 	public static void main(String[] args) {
 		// インスタンス化
-		lion lion = new lion();
+		Lion lion = new Lion();
 
 		// setter
 		lion.setName("ライオン");

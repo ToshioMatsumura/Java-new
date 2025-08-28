@@ -23,8 +23,36 @@
 
 package main;
 
-
+import java.util.Scanner;
 
 public class Main {
+	public static void main(String[] arg) {
 
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("名前を入力してください：");
+		String name = scanner.nextLine();
+
+		Character player = new Character(name);
+
+		// 出力
+		System.out.println("こんにちは 「 " + player.getName() + " 」 さん");
+
+		System.out.println("ステータス");
+
+		System.out.println("HP：" + player.getHp());
+
+		System.out.println("MP：" + player.getMp());
+
+		System.out.println("攻撃力：" + player.getAttack());
+
+		System.out.println("素早さ：" + player.getSpeed());
+
+		System.out.println("防御力：" + player.getDefense());
+
+		System.out.println();
+
+		System.out.println("さあ冒険に出かけよう！");
+
+	}
 }
