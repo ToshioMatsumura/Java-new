@@ -40,11 +40,46 @@
 */
 package qes27;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class Manyanimals {
-
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		Scanner scanner = new Scanner(System.in);
 
+		System.out.println("コンソールに文字を入力してください");
+		String input = scanner.nextLine();
+		scanner.close();
+
+		// 学名を登録（対応表）
+		Map<String, String> scientificNames = new HashMap<>();
+		scientificNames.put("ライオン", "パンテラ レオ");
+		scientificNames.put("ゾウ", "ロキソドンタ・サイクロティス");
+		scientificNames.put("パンダ", "アイルロポダ・メラノレウカ");
+		scientificNames.put("チンパンジー", "パン・トゥログロディテス");
+		scientificNames.put("シマウマ", "チャップマンシマウマ");
+		scientificNames.put("インコ", "不明");
+
+		// , で分割 → 各動物を処理
+		String[] animals = input.split(",");
+
+		for (String animalData : animals) {
+			// : で分割
+			String[] parts = animalData.split(":");
+			String name = parts[0];
+			String length = parts[1];
+			String speed = parts[2];
+
+			// 学名を対応表から取得（なければ「不明」）
+			String scientificName = scientificNames.getOrDefault(name, "不明");
+
+			// 出力
+			System.out.println("動物名：" + name);
+			System.out.println("体長：" + length + "m");
+			System.out.println("速度：" + speed + "km/h");
+			System.out.println("学名：" + scientificName);
+			System.out.println(); // 空行
+		}
 	}
-
 }
