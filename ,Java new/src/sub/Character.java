@@ -22,8 +22,6 @@
  */
 package sub;
 
-import java.util.Random;
-
 public class Character {
 
 	private String name; // 名前
@@ -38,71 +36,32 @@ public class Character {
 
 	private int defense; // 防御力
 
-	public Character(String name) {
+	 public Character(String name, int hp, int mp, int attack, int speed, int defense) {
+	        this.name = name;
+	        this.hp = hp;
+	        this.mp = mp;
+	        this.attack = attack;
+	        this.speed = speed;
+	        this.defense = defense;
 
-		this.name = name;
-
-		Random rand = new Random();
-
-		this.hp = rand.nextInt(1000); // 0〜999
-		this.mp = rand.nextInt(1000);
-		this.attack = rand.nextInt(500);
-		this.speed = rand.nextInt(1000);
-		this.defense = rand.nextInt(100);
-
+	        
 	}
+	 
+	 public String getName() { return name; }
+	    public void setName(String name) { this.name = name; }
 
-	public String getName() {
-		return name;
-	}
+	    public int getHp() { return hp; }
+	    public void setHp(int hp) { this.hp = hp; }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+	    public int getMp() { return mp; }
+	    public void setMp(int mp) { this.mp = mp; }
 
-	public int getHp() {
-		return hp;
-	}
+	    public int getAttack() { return attack; }
+	    public void setAttack(int attack) { this.attack = attack; }
 
-	public void setHp(int hp) {
-		this.hp = hp;
-	}
+	    public int getSpeed() { return speed; }
+	    public void setSpeed(int speed) { this.speed = speed; }
 
-	public int getMp() {
-		return mp;
-	}
-
-	public void setMp(int mp) {
-		this.mp = mp;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public void setAttack(int attack) {
-		this.attack = attack;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public void setDefense(int defense) {
-		this.defense = defense;
-	}
-
-	class Adventurer extends Character {
-		public Adventurer(String name) {
-			super(name); // スーパークラス(Player)のコンストラクタ呼び出し
-		}
-	}
+	    public int getDefense() { return defense; }
+	    public void setDefense(int defense) { this.defense = defense; }
 }

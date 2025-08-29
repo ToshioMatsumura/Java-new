@@ -25,15 +25,18 @@ package main;
 
 import java.util.Scanner;
 
+import sub.Player;
+
 public class Main {
 	public static void main(String[] arg) {
 
 		Scanner scan = new Scanner(System.in);
 
+		//		名前の入力
 		System.out.println("名前を入力してください：");
-		String name = scanner.nextLine();
+		String name = scan.nextLine();
 
-		Character player = new Character(name);
+		Player player = new Player(name);
 
 		// 出力
 		System.out.println("こんにちは 「 " + player.getName() + " 」 さん");
@@ -54,5 +57,7 @@ public class Main {
 
 		System.out.println("さあ冒険に出かけよう！");
 
+		
+		scan.close();
 	}
 }
