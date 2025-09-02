@@ -21,13 +21,13 @@
  
  */
 
-package main;
+package qes25main;
 
 import java.util.Scanner;
 
-import sub.Player;
+import qes25sub.Oes25Player;
 
-public class Main {
+public class Qes25main {
 	public static void main(String[] arg) {
 
 		Scanner scan = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class Main {
 		System.out.println("名前を入力してください：");
 		String name = scan.nextLine();
 
-		Player player = new Player(name);
+		Oes25Player player = new Oes25Player(name);
 
 		// 出力
 		System.out.println("こんにちは 「 " + player.getName() + " 」 さん");

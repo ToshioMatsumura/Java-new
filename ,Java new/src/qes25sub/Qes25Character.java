@@ -1,5 +1,4 @@
-/*
- 
+/* 
  名前を入力したら下記がコンソールに出力されるように作ってください
 	条件：数値は毎回変わるように作ってください
 	 	 サブクラスを使用してください
@@ -20,9 +19,9 @@
 	さあ冒険に出かけよう！
  
  */
-package sub;
+package qes25sub;
 
-public class Character {
+public class GameCharacter {
 
 	private String name; // 名前
 
@@ -36,7 +35,7 @@ public class Character {
 
 	private int defense; // 防御力
 
-	 public Character(String name, int hp, int mp, int attack, int speed, int defense) {
+	 public GameCharacter(String name, int hp, int mp, int attack, int speed, int defense) {
 	        this.name = name;
 	        this.hp = hp;
 	        this.mp = mp;

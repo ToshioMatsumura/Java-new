@@ -3,6 +3,8 @@ package qes28_29main;
 import qes28_29sub.Prefecture;
 
 public class Qes28_29main {
+	
+}
 public static void main(String[] args) {
 	
 	Prefecture[] prefucture = {
@@ -19,9 +21,5 @@ public static void main(String[] args) {
             new Prefecture("埼玉県", "さいたま市", 3798)
         };
 	
-	for (int i = 0; i < prefucture.length; i++) {
-        Prefecture p = prefucture[i];
-        System.out.println(i + ": " + p.getName() + " " + p.getCapital() + " " + p.getArea());
-    }
-	}
+	
 }
