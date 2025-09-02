@@ -21,7 +21,7 @@
  */
 package qes25sub;
 
-public class GameCharacter {
+public class Qes25Character {
 
 	private String name; // 名前
 
@@ -35,7 +35,7 @@ public class GameCharacter {
 
 	private int defense; // 防御力
 
-	 public GameCharacter(String name, int hp, int mp, int attack, int speed, int defense) {
+	 public Qes25Character(String name, int hp, int mp, int attack, int speed, int defense) {
 	        this.name = name;
 	        this.hp = hp;
 	        this.mp = mp;

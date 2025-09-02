@@ -24,7 +24,7 @@ package qes25sub;
 
 import java.util.Random;
 
-public class Oes25Player extends GameCharacter {
+public class Oes25Player extends Qes25Character {
 
 	private static final Random rand = new Random();
 
