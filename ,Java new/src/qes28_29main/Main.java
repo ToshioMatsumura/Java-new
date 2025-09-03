@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		String[] date = {
+		String[] data = {
 				"北海道:札幌市:83424",
 				"青森県:青森市:9646",
 				"岩手県:盛岡市:15275",
@@ -19,14 +19,14 @@ public class Main {
 				"群馬県:前橋市:6362",
 				"埼玉県:さいたま市:3798"
 		};
+		Prefecture[] prefectures = new Prefecture[data.length];
 
-
-		for (int i = 0; i < date.length; i++) {
-			String[] parts = date[5].split(":");
-			Prefecture[i] = new Prefecture(parts[0], parts[1], Double.parseDouble(parts[2]));
+		for (int i = 0; i < data.length; i++) {
+			String[] parts = data[i].split(":");
+			prefectures[i] = new Prefecture(parts[0], parts[1], Double.parseDouble(parts[2]));
 		}
 
-		for (Prefecture p : Prefecture) {
+		for (Prefecture p : prefectures) {
 			System.out.println(p);
 		}
 
