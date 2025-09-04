@@ -39,7 +39,7 @@
 package qes28_29main;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -78,19 +78,18 @@ public class Main {
 
 		String[] nums = input.split(",");//		入力した数字をリストに変換
 
-		List<Prefecture> selectedList = new ArrayList<>();
+		
+		
+		List<Integer> selectedList = new ArrayList<>();
 		
 		//===============================================================================
-		System.out.println("昇順なら asc、降順なら desc を入力してください：");
-
-		String order = sc.nextLine();
 		
 		for (String numStr : nums) {
 			try {
 				int index = Integer.parseInt(numStr.trim());
 
 				if (index >= 0 && index < prefectures.length) {
-					System.out.println(prefectures[index]);
+					selectedList.add(index);
 				} else {
 					System.out.println("番号" + index + "は存在しません");
 				}
@@ -98,35 +97,40 @@ public class Main {
 				System.out.println("無効な入力: " + numStr);
 			}
 		}
-
 		
-		
-		
-		// ④ 昇順・降順でソート
-		if (order.equalsIgnoreCase("asc")) {
-			selectedList.sort(Comparator.comparingDouble(Prefecture::getArea));
-		} else if (order.equalsIgnoreCase("desc")) {
-			selectedList.sort(Comparator.comparingDouble(Prefecture::getArea).reversed());
-		} else {
-			System.out.println("無効な入力です。昇順でソートします。");
-			selectedList.sort(Comparator.comparingDouble(Prefecture::getArea));
-		}
-
-		System.out.println("\n選択された都道府県の情報:");
-		for (Prefecture p : selectedList) {
-			System.out.println(p);
-		}
-
-		
-		
-		// 選択した番号をリストに追加
 		
 		if (selectedList.isEmpty()) {
 			System.out.println("選択された都道府県はありません。");
 			sc.close();
 			return;
 		}
+		
+		System.out.println("昇順なら up、降順なら down を入力してください：");
 
+		String order = sc.nextLine();
+		
+		
+		// ④ 昇順・降順でソート
+		if (order.equalsIgnoreCase("up")) {
+			Collections.sort(selectedList);
+		} else if (order.equalsIgnoreCase("down")) {
+			Collections.sort(selectedList,Collections.reverseOrder());
+		} else {
+			System.out.println("無効な入力です。昇順でソートします。");
+			Collections.sort(selectedList);
+		}
+
+		
+		System.out.println("\n選択された都道府県の情報:");
+		
+		for (int idx : selectedList) {
+			Prefecture p = prefectures[idx];
+			System.out.println("都道府県名：" + p.getName());
+            System.out.println("県庁所在地：" + p.getCapital());
+            System.out.println("面積：" + p.getArea() + "km2");
+            System.out.println();
+		}
+		
 		sc.close();
 	}
 
