@@ -74,13 +74,17 @@ public class Main {
 
 		System.out.println("番号をカンマ区切りで入力してください（例: 8,5,9）：");
 
-		String input = sc.nextLine();
-		//		入力した数字をリストに変換
-		String[] nums = input.split(",");
+		String input = sc.nextLine(); //数字の入力受付
+
+		String[] nums = input.split(",");//		入力した数字をリストに変換
 
 		List<Prefecture> selectedList = new ArrayList<>();
+		
+		//===============================================================================
+		System.out.println("昇順なら asc、降順なら desc を入力してください：");
 
-		// 選択した番号をリストに追加
+		String order = sc.nextLine();
+		
 		for (String numStr : nums) {
 			try {
 				int index = Integer.parseInt(numStr.trim());
@@ -94,17 +98,10 @@ public class Main {
 				System.out.println("無効な入力: " + numStr);
 			}
 		}
+
 		
-		if (selectedList.isEmpty()) {
-            System.out.println("選択された都道府県はありません。");
-            sc.close();
-            return;
-        }
-
-		System.out.println("昇順なら asc、降順なら desc を入力してください：");
-
-		String order = sc.nextLine();
-
+		
+		
 		// ④ 昇順・降順でソート
 		if (order.equalsIgnoreCase("asc")) {
 			selectedList.sort(Comparator.comparingDouble(Prefecture::getArea));
@@ -118,6 +115,16 @@ public class Main {
 		System.out.println("\n選択された都道府県の情報:");
 		for (Prefecture p : selectedList) {
 			System.out.println(p);
+		}
+
+		
+		
+		// 選択した番号をリストに追加
+		
+		if (selectedList.isEmpty()) {
+			System.out.println("選択された都道府県はありません。");
+			sc.close();
+			return;
 		}
 
 		sc.close();
