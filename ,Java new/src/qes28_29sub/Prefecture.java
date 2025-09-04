@@ -50,10 +50,26 @@ public class Prefecture {
 
 	// コンストラクタ（引数3つを受け取る）
 	public Prefecture(String name, String capital, double area) {
+		
 		this.name = name; // フィールド name に引数 name を代入
+		
 		this.capital = capital; // フィールド capital に引数 capital を代入
+		
 		this.area = area; // フィールド area に引数 area を代入
 	}
+	
+	
+	public String getName() {
+        return name;
+    }
+
+    public String getCapital() {
+        return capital;
+    }
+
+    public double getArea() {
+        return area;
+    }
 
 	// toString() をオーバーライドして見やすく表示
 	@Override
