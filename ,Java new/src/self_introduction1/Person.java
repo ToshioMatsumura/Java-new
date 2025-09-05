@@ -59,7 +59,7 @@ class Person {
 	void print() {
 		System.out.println("名前は" + this.name + "です。");
 		System.out.println("歳は" + this.age + "です。");
-		System.out.println("BMIは" + String.format("%.1f",this.bmi()) + "です。");
+		System.out.println("BMIは" + Math.floor(this.bmi()) + "です。");
 		System.out.println("合計" + Person.count + "人です");
 
 	}
