@@ -9,31 +9,41 @@
 ※順番はfirstNameの次
 
 問題3：作成したコンストラクタの中に「Person.count++; this.lastName;」を追加し
-lastNameフィールドの値をセットしてください*/
+       lastNameフィールドの値をセットしてください*/
+
 package self_introduction3;
 
 class Person {
-	private String name;
-	private String lastName;
+	private static int count = 0;
+	private String firstName;
+	private String lastName; //追加した情報　
 	private int age;
-	private double height;
-	private double weight;
+	private double height, weight;
 
 	Person(String firstName, String lastName, int age, double height, double weight) {
 		this.firstName = firstName;
-		this.lastName = lastName;
+		this.lastName = lastName; //ここも追加
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
-		Person.count++;
+
+		Person.count++;  //人数カウントを増やすもの
+	}
+
+	public String fullName() {
+		return this.firstName + this.lastName;
+	}
+
+	public void print() {
+		System.out.println("名前は" + this.fullName() + "です");
+		System.out.println("年は" + this.age + "です");
 	}
 
 	public double bmi() {
 		return this.weight / this.height / this.height;
 	}
 
-	public void print() {
-		System.out.println("名前は" + this.name() + "です");
-		System.out.println("年は" + this.age() + "です");
+	public static void printCount() {
+		System.out.println("合計" + Person.count + "人です");
 	}
 }

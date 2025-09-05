@@ -8,17 +8,18 @@
 ※順番はfirstNameの次
 
 問題3：作成したコンストラクタの中に「Person.count++; this.lastName;」を追加し
-lastNameフィールドの値をセットしてください*/
+       lastNameフィールドの値をセットしてください*/
 
 package self_introduction3;
 
-public class Main {
+class Main{
+	 public static void main(String[] args){
+	  Person person1 = new Person("鈴木", "太郎", 20, 1.7, 60);
+	  person1.print();
 
-	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-		Person person1 = new Person("鈴木太郎", 20, 1.7, 60);
-		person1.print();
-		Person person2 = new Person("山田花子", 22, 1.5, 40);
-		person2.print();
+	  Person person2 = new Person("山田", "花子", 22, 1.5, 40);
+	  person2.print();
+
+	  Person.printCount();
+	 }
 	}
-}
