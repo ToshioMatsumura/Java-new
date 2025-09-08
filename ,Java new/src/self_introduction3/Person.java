@@ -27,7 +27,7 @@ class Person {
 		this.height = height;
 		this.weight = weight;
 
-		Person.count++;  //人数カウントを増やすもの
+		Person.count++; //人数カウントを増やすもの
 	}
 
 	public String fullName() {
@@ -45,5 +45,15 @@ class Person {
 
 	public static void printCount() {
 		System.out.println("合計" + Person.count + "人です");
+	}
+
+	public void buy(Car car) { //課題33 問題6
+		car.setOwner(this.fullName());//課題33 問題7
+		System.out.println(this.fullName() + "が購入しました");//課題33 問題8
+	}
+
+	public void buy(Bicycle bicycle) {   //課題33問題9
+		bicycle.setOwner(this.fullName());
+		System.out.println(bicycle.getOwner() + "が購入しました");
 	}
 }
