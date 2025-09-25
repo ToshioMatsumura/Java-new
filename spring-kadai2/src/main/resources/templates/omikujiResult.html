@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>おみくじ結果</title>
+</head>
+<body>
+ <h1>おみくじ結果</h1>
+    <p th:text="'こんにちは、' + ${name} + 'さん！'"></p>
+    <p th:text="'あなたの今日の運勢は『' + ${result} + '』です！'"></p>
+    <a href="/omikujiController.html">もう一度引く</a>
+</body>
+</html>
