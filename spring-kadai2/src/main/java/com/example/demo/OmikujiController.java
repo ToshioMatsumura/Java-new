@@ -32,14 +32,16 @@ public class OmikujiController {
 
 		case 4:
 			result = "小吉";
-
+			break;
+			
 		case 5:
 			result = "凶";
+			break;
 		}
-		
-		model.addAttribute("name",name);
-		model.addAttribute("result",result);
-		
+
+		model.addAttribute("name", name);
+		model.addAttribute("result", result);
+
 		return "omikujiResult";
 	}
 }
